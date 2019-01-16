@@ -14,4 +14,4 @@ fibonacci_test: fibonacci_test.o generators.o
 
 clean:
 	rm -f *.o *.dSYM 
-	ls | grep -v "\." | xargs rm !("Makefile")
+	ls | grep -v "\." | grep -v Makefile | xargs rm
