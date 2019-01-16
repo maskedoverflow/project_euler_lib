@@ -1,4 +1,9 @@
+#if !defined(GENERATORS_H)
+#define GENERATORS_H
 
+#include <stdlib.h>
+#include <limits.h>
+#include "types.h"
 /* declarations of the fibonacci functions
   fibonacci_gen resets the fibonacci sequence if reset == 1 and returns the next sequence member
 
@@ -8,6 +13,10 @@
 
   fibonacci_slice returns every n-th member of the sequence
 */
-int fibonacci_gen(int reset);
-int fibonacci(int n);
-int fibonacci_sum(int n, int omit);
+long fibonacci_gen(int reset, unsigned long threshold);
+long fibonacci(int n);
+long fibonacci_sum(int n, int omit_every);
+long_array *fibonacci_slice(int slicee, int n);
+
+
+#endif // GENERATORS_H
