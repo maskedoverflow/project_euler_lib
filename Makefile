@@ -10,8 +10,8 @@ generators.o: generators.c generators.h
 	$(CC) -c $(CFLAGS) $(DEBUG) -o $@ $< 
 
 fibonacci_test: fibonacci_test.o generators.o 
-	$(LINKER) $(CFLAGS) $(DEBUG) -o $@ $<
+	$(LINKER) $(CFLAGS) $(DEBUG) -o $@ fibonacci_test.o generators.o 
 
 clean:
 	rm -f *.o *.dSYM 
-	ls | grep -v "\." | xargs rm
+	ls | grep -v "\." | xargs rm !("Makefile")
