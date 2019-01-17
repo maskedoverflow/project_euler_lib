@@ -24,8 +24,4 @@ def intelligent():
             - consecutive_sum(15, 999, 15))
 
 
-t0 = time.time()
-total = intelligent()
-t1 = time.time()
-print(total)
-print(t1-t0)
+print(intelligent())
