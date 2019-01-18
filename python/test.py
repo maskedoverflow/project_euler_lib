@@ -1,5 +1,4 @@
-import operator
+from eulerlib import BinaryTree
 
-import eulerlib as e
-
-print(list(e.segment_reduce(operator.add, [1, 2], 3)))
+b = BinaryTree(1, BinaryTree(2, BinaryTree(4, None, None), BinaryTree(5, None, None)), BinaryTree(3, BinaryTree(6, None, None), BinaryTree(7, None, None)))
+print(b)
