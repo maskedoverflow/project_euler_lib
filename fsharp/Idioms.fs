@@ -6,6 +6,7 @@ module Benchmarking =
   /// That is, call this like durationOf (fun whatever -> whatever)
   let durationOf f =
     let timer = System.Diagnostics.Stopwatch()
+    timer.Start()
     let result = f()
     Printf.printfn "Function took %i ms" timer.ElapsedMilliseconds
     result
