@@ -2,7 +2,6 @@ namespace ProjectEulerLib
 open System
 
 module Factorizing =
-
   // This inefficiently looks for the biggest prime in any given number by tearing said number down
   let biggestFactorOf number =
     let rec sluggish factor = function
